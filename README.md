@@ -10,15 +10,15 @@ and finance. *Economics Letters* (2024), doi:
 ### Load packages
 
 ``` r
-library(readr)
-library(magrittr)
-library(dplyr)
+library(arrow) # to load parquet file
+library(magrittr) # pipe
+library(dplyr) 
 library(tidyr)
-library(zoo) 
-library(ggplot2)
+library(zoo) # dates
 library(BayesMultiMode)
-library(ggpubr)
 library(multimode)
+library(ggpubr)
+library(ggplot2) 
 ```
 
 ``` r
@@ -45,7 +45,7 @@ all_tests <- function(y, p1) {
 ### loading the data
 
 ``` r
-raw_data = read_csv("michigan_15_april_2023.csv")
+raw_data = read_parquet("michigan_15_april_2023.parquet")
 
 df_raw_data = raw_data %>%
   mutate(date = as.yearmon(as.character(YYYYMM),"%Y%m"),
