@@ -14,6 +14,13 @@ knitr::opts_chunk$set(
 
 Replication code for J.L. Cross, L. Hoogerheide, P. Labonne and H.K. van Dijk, Bayesian mode inference for discrete distributions in economics and finance. *Economics Letters* (2024), doi: https://doi.org/10.1016/j.econlet.2024.111579.
 
+### Install the development version of BayesMultiMode
+```{r}
+# install.packages("devtools") # if devtools not installed 
+devtools::install_github("paullabonne/BayesMultiMode", quiet = T)
+```
+
+
 ### Load packages
 ```{r}
 library(arrow) # to load parquet file

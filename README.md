@@ -7,6 +7,13 @@ Dijk, Bayesian mode inference for discrete distributions in economics
 and finance. *Economics Letters* (2024), doi:
 <https://doi.org/10.1016/j.econlet.2024.111579>.
 
+### Install the development version of BayesMultiMode
+
+``` r
+# install.packages("devtools") # if devtools not installed 
+devtools::install_github("paullabonne/BayesMultiMode", quiet = T)
+```
+
 ### Load packages
 
 ``` r
@@ -105,7 +112,7 @@ ggarrange(g1, g2,
           nrow = 3)
 ```
 
-![](man/figures/README-unnamed-chunk-6-1.png)<!-- -->
+![](man/figures/README-unnamed-chunk-7-1.png)<!-- -->
 
 ``` r
 tests1 = all_tests(y1, mode1$p1)
@@ -175,7 +182,7 @@ ggarrange(p1, p2,
           widths = c(0.8,1,1))
 ```
 
-![](man/figures/README-unnamed-chunk-8-1.png)<!-- -->
+![](man/figures/README-unnamed-chunk-9-1.png)<!-- -->
 
 ``` r
 tests_default = all_tests(y, modes$p1)
